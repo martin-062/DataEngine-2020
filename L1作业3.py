@@ -35,4 +35,3 @@ df3.to_csv('车型投诉总数.csv')
 df4 = df1.groupby(['brand','car_model'])['id'].agg(['count']).groupby(['brand']).mean().sort_values('count', ascending= False)
 print('品牌平均车型投诉总数', df4)
 df4.to_csv('品牌平均车型投诉总数.csv')
-#请教老师为何输出的文件里，一汽大众和一汽-大众还是分开的，而df1输出里面已经统一了
