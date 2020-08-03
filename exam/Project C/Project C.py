@@ -63,10 +63,10 @@ plt.ylabel('SSC')
 plt.plot(x, ssc, 'o-')
 plt.show()
 
-# 结合手肘法和轮廓系数，确定K=14？    ！！每次运行由于K随机取，轮廓系数结果不同，如何取最优K？！！
-
+# 结合手肘法和轮廓系数图示，选择最优K，输入
+K = input('请根据图示输入最优K： ')
 # 使用KMeans聚类，训练创建模型
-kmeans = KMeans(n_clusters=14)
+kmeans = KMeans(n_clusters=int(K))
 kmeans.fit(train_x)
 # 预测，给每一行打标签
 predict_y = kmeans.predict(train_x)
